@@ -8,7 +8,7 @@
 TempFile=$(mktemp /tmp/${0##*/}.XXXXXX)
 trap "rm -f \"${TempFile}\" ; exit 0" 0 1 2 3 15
 (
-echo "To: charlesfung@gmail.com"
+echo "To: your@email.here.com"
 echo "Subject: SMART Results for all drives"
 echo " "
 ) > ${TempFile}
