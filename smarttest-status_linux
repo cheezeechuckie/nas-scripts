@@ -1,0 +1,6 @@
+#!/bin/sh
+
+for disk in /dev/sd? ; do
+    echo ${disk}
+    smartctl -l selftest ${disk} | grep status
+done
