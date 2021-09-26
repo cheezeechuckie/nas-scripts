@@ -1,5 +1,7 @@
 #!/bin/sh
 
+date
+
 for disk in /dev/sd? ; do
     echo ${disk}
     smartctl -a ${disk} | grep 'test remaining'
