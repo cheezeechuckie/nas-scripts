@@ -2,5 +2,5 @@
 
 for disk in /dev/sd? ; do
     echo ${disk}
-    smartctl -l selftest ${disk} | grep status
+    smartctl -a ${disk} | grep 'test remaining'
 done
