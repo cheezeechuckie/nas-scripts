@@ -1,0 +1,10 @@
+#!/bin/sh
+drives=`sysctl -n kern.disks | awk '{for (i=NF; i!=0 ; i--) print $i     }'`
+
+for drive in $drives
+do
+
+smartctl --test=long /dev/${drive}
+
+done
+
