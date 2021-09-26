@@ -4,6 +4,6 @@ drives=`sysctl -n kern.disks | awk '{for (i=NF; i!=0 ; i--) print $i     }'`
 for drive in $drives
 do
 (
-smartctl -l selftest /dev/${drive} | grep status
+smartctl -a /dev/${drive} | grep 'test remaining'
 )
 done
